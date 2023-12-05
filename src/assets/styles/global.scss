@@ -1,0 +1,31 @@
+@import 'null.scss';
+@import 'variables.scss';
+
+
+html {
+	font-size: 10px;
+	line-height: 1.2;
+	letter-spacing: 0.2px;
+}
+
+body {
+	font-family: 'Golos Text', sans-serif;
+	color: #f6fdff;
+	background-color: #131214;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	letter-spacing: 0.03rem;
+
+	&.loading {
+		filter: blur(.8rem);
+	}
+}
+
+.btn {
+	border: 1px solid cadetblue;
+	background: cadetblue;
+	border-radius: 0.3rem;
+	padding: 0.5rem 1rem;
+	text-decoration: none;
+	color: rgb(239, 239, 241);
+}

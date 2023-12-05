@@ -1,0 +1,48 @@
+.body {
+	width: 200%;
+	display: flex;
+	height: 100%;
+	overflow: hidden;
+}
+
+.months {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(4, 1fr);
+	aspect-ratio: 1;
+	transition: all .3s ease-out;
+	visibility: visible;
+	opacity: 1;
+
+	>* {
+		font-size: 1.2rem;
+		text-align: center;
+		padding: 1.3rem 1rem;
+		transition: all .3s ease;
+		cursor: pointer;
+		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		&:hover {
+			background-color: var(--hover);
+		}
+
+		&.current {
+			color: var(--text);
+		}
+	}
+
+	&.hide {
+		transform: translateX(-100%);
+		visibility: hidden;
+		opacity: 0;
+	}
+
+	.open {
+		background: var(--select);
+
+	}
+}

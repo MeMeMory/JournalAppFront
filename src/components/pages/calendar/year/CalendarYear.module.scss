@@ -1,0 +1,38 @@
+.years {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: .3rem;
+	width: 100%;
+	border-bottom: 1px solid var(--text);
+	padding: .6rem 0 .8rem;
+
+	.head {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: .2rem;
+
+		&.back {
+			cursor: pointer;
+		}
+	}
+
+	.year,
+	.month {
+		font-size: 1.7rem;
+		font-weight: 700;
+	}
+
+	.button {
+		width: 3rem;
+		height: 3rem;
+		cursor: pointer;
+
+		svg {
+			width: 100%;
+			height: 100%;
+			fill: var(--text);
+		}
+	}
+}

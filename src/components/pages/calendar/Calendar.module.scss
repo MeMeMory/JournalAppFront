@@ -1,0 +1,31 @@
+.datepicker {
+	width: calc(25rem + (.4rem * 2));
+	border-radius: .3rem;
+	overflow: hidden;
+	position: relative;
+	--disable: rgba(0, 0, 0, 0.315);
+
+	&.dark {
+		--bg: rgb(66, 66, 66);
+		--text: rgb(244, 253, 252);
+		--heading: rgb(82, 200, 255);
+		--hover: rgba(2, 153, 153, 0.2);
+		--select: rgb(2, 153, 153);
+
+		background-color: var(--bg);
+		color: var(--text);
+		box-shadow: 1px 1px 10px var(--bg);
+	}
+
+	&.light {
+		--bg: #fcf5ed;
+		--text: rgb(20, 0, 20);
+		--heading: rgb(0, 77, 112);
+		--hover: rgba(66, 0, 66, .4);
+		--select: rgb(66, 0, 66);
+
+		background-color: var(--bg);
+		color: var(--text);
+		box-shadow: 1px 1px 7px var(--text);
+	}
+}
