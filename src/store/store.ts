@@ -15,6 +15,7 @@ import storage from 'redux-persist/lib/storage'
 import { daySlice } from './slices/day.slice'
 import { monthSlice } from './slices/month.slice'
 import { yearSlice } from './slices/year.slice'
+import { userSlice } from './user/user.slice'
 
 const persistConfig: PersistConfig<unknown> = {
   key: 'root',
@@ -24,7 +25,8 @@ const persistConfig: PersistConfig<unknown> = {
 const rootReducer = combineReducers({
   year: yearSlice.reducer,
   month: monthSlice.reducer,
-  day: daySlice.reducer
+  day: daySlice.reducer,
+  user: userSlice.reducer
 })
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)
