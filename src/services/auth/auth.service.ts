@@ -31,7 +31,7 @@ export const AuthService = {
       { refreshToken }
     )
 
-    if (response.data.accessToken) saveToStorage(response.data)
+    if (response?.data?.accessToken) saveToStorage(response.data)
 
     return response
   }

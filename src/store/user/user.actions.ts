@@ -1,7 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit'
 
-import { errorCatch } from '@/api/api.helper'
-
 import { IAuthResponse, IEmailPassword } from './user.interface'
 import { removeFromStorage } from '@/services/auth/auth.helper'
 import { AuthService } from '@/services/auth/auth.service'
@@ -48,3 +46,13 @@ export const checkAuth = createAsyncThunk<IAuthResponse>(
     }
   }
 )
+
+const errorCatch = (error: any): string => {
+  const message = error?.response?.data?.message
+
+  return message
+    ? typeof error.response.data.message === 'object'
+      ? message[0]
+      : message
+    : error.message
+}

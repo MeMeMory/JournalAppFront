@@ -15,6 +15,12 @@ body {
 	overflow-x: hidden;
 	overflow-y: scroll;
 	letter-spacing: 0.03rem;
+	min-height: 30rem;
+	overflow-x: auto;
+
+	>div {
+		height: 100vh;
+	}
 
 	&.loading {
 		filter: blur(.8rem);
